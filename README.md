@@ -17,6 +17,6 @@ Chrisitne Camou
 
 # Links 
 
-1. Github code: 
-2. Github hosted: 
-3. Heroku hosted: 
+1. Github code: https://github.com/clcamou/note-taker
+2. Github hosted: https://clcamou.github.io/takenote/index
+3. Heroku hosted: https://glacial-temple-44852.herokuapp.com/
