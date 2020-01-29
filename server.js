@@ -6,14 +6,14 @@ const path = require("path")
 let app = express();
 
 //set port
-let PORT = process.env.PORT || 8000; 
+let PORT = process.env.PORT || 8181; 
 
 //use file system to write to the database
 fs.writeFile(path.join(__dirname, "db/db.json"), "[]",  function (err) {
     if (err) {
         return console.log(err);
     } 
-    console.log("Sucess")
+    console.log("Success")
 })
 
 app.use(express.urlencoded({ extended: true}));
