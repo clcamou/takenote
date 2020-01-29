@@ -6,7 +6,7 @@ const path = require("path")
 let app = express();
 
 //set port
-let PORT = process.env.PORT || 8500; 
+let PORT = process.env.PORT || 3000; 
 
 //use file system to write to the database
 fs.writeFile(path.join(__dirname, "db/db.json"), "[]",  function (err) {
