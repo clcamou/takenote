@@ -13,7 +13,7 @@ let PORT = process.env.PORT || 8181;
 
 
 //set server to use express 
-app.use(express.urlencoded({ extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //use public 
@@ -21,8 +21,7 @@ app.use(express.static("public"));
 
 //use file system to write to the database
 app.get("/api/notes", function(req, res){
-    let dbParsed;
-    fs.readFile("./db/db.JSON", function(err, data){
+    fs.readFile("./db/db.json", function(err, data){
         if (err) {
             console.log(err)
         } else {
@@ -37,7 +36,7 @@ app.post("/api/notes", function(res, req){
     console.log(newNote)
     let dataTable;
 
-    fs.readFile("./db/db.JSON", function(err, data){
+    fs.readFile("/db/db.JSON", function(err, data){
         if (err) {
             console.log(err)
         } else {
@@ -65,5 +64,5 @@ app.delete("/api/notes/:id", function(req, res){
 
 
 app.listen(PORT, function () {
-    console.log("You did it!" + PORT)
+    console.log("You did it! It's on " + PORT)
 })
